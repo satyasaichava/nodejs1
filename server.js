@@ -84,7 +84,7 @@ app.post('/api/registration', (req, res) => {
   };
   //inserting into db
   //connection.execute('INSERT INTO register SET ?', registerdata)
-  connection.execute('INSERT INTO users (name, email, phone, password, username) VALUES (:name, :email, :phone, :password, :username)', registerdata)
+  connection.execute('INSERT INTO register (name, email, phone, password, username) VALUES (:name, :email, :phone, :password, :username)', registerdata)
 
   .then(result => {
     //console.log('Insert successful. Rows affected:', result.affectedRows);

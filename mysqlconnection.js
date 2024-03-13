@@ -9,7 +9,8 @@ const pool = mysql.createPool({
     database: 'nodeapi',
     waitForConnections: true,
     connectionLimit: 10, // Adjust the maximum number of connections
-    queueLimit: 0 // Unlimited queued requests (0)
+    queueLimit: 0, // Unlimited queued requests (0)
+    namedPlaceholders: true
   });
 
 // Export the pool for use in other modules
